@@ -1,0 +1,117 @@
+/* ThemeToggle.module.css */
+.themeSwitch {
+  position: relative;
+  display: inline-block;
+  min-width: calc(var(--toggle-size) * 1.75);
+  height: var(--toggle-size);
+}
+
+.themeSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.themeSwitch__slider {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background: var(--bg-body);
+  border-radius: var(--toggle-size);
+  border: 1px solid transparent;
+
+  transition: var(--toggle-transition);
+
+  box-shadow: var(--shadow-1);
+
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.themeSwitch__slider:hover {
+  border: 1px solid var(--color-hover);
+}
+
+.themeIcon {
+  position: absolute;
+  width: var(--toggle-icon-size);
+  height: var(--toggle-icon-size);
+  top: var(--toggle-padding);
+  left: var(--toggle-padding);
+  transition: var(--toggle-transition);
+}
+
+.sun,
+.moon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: inherit;
+  display: grid;
+  place-items: center;
+}
+
+.sun {
+  /* background: linear-gradient(
+    rgb(248, 181, 57),
+    rgb(249, 252, 251),
+    rgb(255, 113, 113),
+    rgb(27, 27, 27)
+  ); */
+  background: var(--bg-sun-moon-toggle);
+  box-shadow: 0 0 10px #f1d951;
+  opacity: 1;
+  transform: rotate(0);
+}
+
+.moon {
+  opacity: 0;
+  transform: rotate(-30deg);
+  background: var(--bg-sun-moon-toggle);
+  box-shadow: 0 0 10px #aca682;
+}
+
+input:checked ~ .themeSwitch__slider .themeIcon {
+  transform: translateX(calc(100% + var(--toggle-padding)));
+}
+
+input:checked ~ .themeSwitch__slider .sun {
+  opacity: 0;
+  transform: rotate(60deg);
+}
+
+input:checked ~ .themeSwitch__slider .moon {
+  opacity: 1;
+  transform: rotate(0);
+}
+
+.themeSwitch input:focus-visible ~ .themeSwitch__slider {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .themeSwitch__slider,
+  .themeIcon,
+  .sun,
+  .moon {
+    transition: none !important;
+  }
+}
+
+/* Визуально скрытый текст для скринридеров */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

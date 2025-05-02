@@ -1,0 +1,156 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-block: 24px;
+  background: var(--bg-body);
+  z-index: 80;
+  transition: var(--transition-all-3s-ease-in-out);
+}
+
+/* Состояние при скролле */
+.header.scrolled {
+  box-shadow: var(--shadow-header-scrolled);
+  padding-block: 12px;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger__line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: background-color 0.2s ease-in-out, transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.burger:hover .burger__line {
+  background-color: var(--color-hover);
+}
+
+.burger.burger__open .burger__line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 5px);
+}
+
+.burger.burger__open .burger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.burger__open .burger__line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.logo__svg {
+  height: var(--size-height);
+  width: var(--size-width);
+}
+
+.logo__text {
+  fill: var(--text-primary);
+  transition: fill 0.3s ease-in-out;
+}
+
+.logo__svg:hover .logo__text {
+  fill: var(--color-hover);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  gap: 24px;
+}
+
+.navLink {
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+  transition: color 0.2s ease;
+  position: relative;
+  padding: 4px 0;
+  padding: 12px 4px;
+}
+
+.navLink:hover {
+  color: var(--color-hover);
+}
+
+.navLink[aria-current="page"] {
+  color: var(--primary);
+}
+
+.navLink[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-accent);
+  background-color: rgb(135, 206, 247);
+  animation: underline 0.3s ease-out;
+}
+
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-body);
+    transform: translateY(-200%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navigation__open {
+    transform: translateY(0);
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .list__item {
+    margin: 0.5rem 0;
+  }
+}

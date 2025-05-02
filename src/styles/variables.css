@@ -1,0 +1,279 @@
+/* variables.css */
+:root {
+  /* Цвета */
+  --color-accent: #918ce6;
+  --color-accent-hover: #a5a1f1;
+  --color-hover: #c5c5c5;
+
+  /* fill color svg */
+  --fill-color-svg: #272727;
+
+  /* filter color svg */
+  --img-filter-svg: invert(14%) sepia(0%) saturate(0%) hue-rotate(164deg)
+    brightness(102%) contrast(96%);
+
+  /* Фоны */
+  --bg-body: #ffffff;
+  --bg-sun-moon-toggle: linear-gradient(
+    rgb(255, 244, 145),
+    rgb(255, 235, 144),
+    rgb(248, 227, 135),
+    rgb(255, 248, 154)
+  );
+
+  /* Текст */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4b5563;
+
+  /* Градиенты для заголовков секций */
+  --section-title-gradient-about: linear-gradient(
+    to right,
+    rgb(24, 86, 167),
+    rgb(77, 184, 35)
+  );
+  --section-title-gradient-skills: linear-gradient(
+    to right,
+    rgb(24, 86, 167),
+    rgb(184, 40, 35)
+  );
+  --section-title-gradient-projects: linear-gradient(
+    to right,
+    rgb(197, 207, 50),
+    rgb(43, 153, 80)
+  );
+  --section-title-gradient-footer: linear-gradient(
+    to right,
+    rgb(155, 68, 190),
+    rgb(35, 162, 184)
+  );
+
+  /* Тени */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-1: -25px 0px 5px 2px hsl(207, 100%, 96%),
+    -11px -16px 5px 0px hsl(207, 100%, 96%),
+    10px -9px 5px 3px hsl(207, 100%, 96%), 9px -20px 5px 1px hsl(207, 100%, 96%),
+    20px -1px 5px 8px hsl(207, 100%, 96%), -6px 8px 5px 1px hsl(207, 100%, 96%);
+  --shadow-header-scrolled: -8px -8px 12px hsl(0, 0%, 100%),
+    8px 8px 12px rgba(0, 0, 0, 0.05);
+  --shadow-skills__item-hover: -4px 4px 5px 0px rgb(31, 31, 31);
+
+  /* Переключатель темы */
+  --toggle-size: 2.5rem;
+  --toggle-padding: 0.25rem;
+  --toggle-icon-size: calc(var(--toggle-size) - var(--toggle-padding) * 2.5);
+  --toggle-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+  /* transition */
+  --transition-all-3s-ease-in-out: all 0.3s ease-in-out;
+
+  /* Отступы */
+  --section-padding-block: 50px;
+  --marginBottom: 40px;
+  --padding20: 20px;
+
+  /* borderRadius */
+  --border-radius-img: 20px;
+  --border-radius-list__item: 16px;
+
+  /* Шрифты */
+  --font-main: "Inter", -apple-system, sans-serif;
+  --base-font-weight: 300;
+  --base-font-size: 16px;
+  --base-line-height: 1.5;
+
+  /* Размеры */
+  --gridWidth: 1220px;
+  --gridPadding: 15px;
+  --headerHeight: 112px;
+  --siteMinWidth: 360px;
+  --size-height: 64px;
+  --size-width: 64px;
+}
+
+/* Темная тема */
+[data-theme="dark"] {
+  /* Цвета */
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+
+  /* Цвет при наведении */
+  --color-hover: #535353;
+
+  /* fill color svg */
+  --fill-color-svg: #c5c5c5;
+
+  /* filter color svg */
+  --img-filter-svg: invert(79%) sepia(1%) saturate(0%) hue-rotate(140deg)
+    brightness(100%) contrast(92%);
+
+  --bg-body: #242424;
+  --bg-sun-moon-toggle: radial-gradient(
+    circle at 10px,
+    #e4dbac 0%,
+    #aca682 60%,
+    #000514 100%
+  );
+
+  --text-primary: rgba(255, 255, 255, 0.9);
+  --text-secondary: rgba(255, 255, 255, 0.7);
+
+  --shadow-1: 8px 0px 13px 2px hsla(0, 0%, 100%, 0.247);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-header-scrolled: -4px -4px 12px cornsilk;
+  --shadow-skills__item-hover: -4px 4px 7px 0px rgb(193, 225, 255);
+}
+
+/* variables.css */
+/* :root { */
+/* Цветовая схема */
+/* --color-primary: #646cff;
+  --color-primary-hover: #535bf2;
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-warning: #f59e0b;
+  --color-warning-hover: #fbbf24;
+  --color-theme-1: white; */
+
+/* fill color svg */
+/* --fill-color-svg: #272727; */
+
+/* Цвет при наведении */
+/* --color-hover: #c5c5c5; */
+
+/* Фоны */
+/* --bg-body: #ffffff;
+
+  --bg-surface: #f9f9f9;
+  --bg-card: #ffffff; */
+
+/* Переключение фона */
+/* --bg-header-toggle-theme: #ffffff;
+
+  --bg-themeSwitch-slider: rgb(255, 255, 255);
+
+  --bg-sun-moon-toggle: linear-gradient(
+    rgb(255, 244, 145),
+    rgb(255, 235, 144),
+    rgb(248, 227, 135),
+    rgb(255, 248, 154)
+  ); */
+
+/* Текст */
+/* --text-primary: #1a1a1a;
+  --text-secondary: #4b5563; */
+
+/* Подчеркивание ссылки в меню навигации */
+/* --accent-color: black; */
+
+/* Границы */
+/* --border-color: #99bace;
+
+  --shadow-border: inset 0 0 0 1px #99baced5;
+
+  --border-radius: 0.5rem; */
+
+/* Размеры */
+/* --max-width: 1200px; */
+
+/* Тени */
+/* --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-1: -25px 0px 5px 2px hsl(207, 100%, 96%),
+    -11px -16px 5px 0px hsl(207, 100%, 96%),
+    10px -9px 5px 3px hsl(207, 100%, 96%), 
+    9px -20px 5px 1px hsl(207, 100%, 96%),
+    20px -1px 5px 8px hsl(207, 100%, 96%), 
+    -6px 8px 5px 1px hsl(207, 100%, 96%);
+
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-header-scrolled: -8px -8px 12px hsl(0, 0%, 100%),
+    8px 8px 12px rgba(0, 0, 0, 0.05);
+  --shadow-skills__item-hover: -4px 4px 5px 0px rgb(31, 31, 31); */
+
+/* Переключатель темы */
+/* --toggle-size: 2.5rem;
+  --toggle-padding: 0.25rem;
+  --toggle-icon-size: calc(var(--toggle-size) - var(--toggle-padding) * 2.5);
+  --toggle-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); */
+
+/* transition */
+/* --transition-all-3s-ease-in-out: all 0.2s ease-in-out; */
+
+/* Отступы */
+/* --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem; */
+
+/* Внутренние отступы */
+/* --container-padding: 1rem;
+  --section-padding-block: 50px;
+  --padding20: 20px;
+  --marginBottom20: 20px; */
+
+/* Внешние отступы */
+/* --marginBottom: 40px; */
+
+/* borderRadius */
+/* --border-radius-img: 20px;
+  --border-radius-list__item: 16px; */
+
+/* Шрифты */
+/* --font-main: "Inter", -apple-system, sans-serif;
+  --base-font-weight: 300;
+  --base-font-size: 16px;
+  --base-line-height: 1.5;
+
+  --gridWidth: 1220px;
+  --gridPadding: 15px;
+
+  --headerHeight: 112px;
+
+  --siteMinWidth: 360px;
+
+  --size-height: 64px;
+  --size-width: 64px;
+} */
+
+/* Темная тема */
+/* [data-theme="dark"] {
+  --color-theme-1: black; */
+
+/* Цвет при наведении */
+/* --color-hover: #535353; */
+
+/* fill color svg */
+/* --fill-color-svg: #c5c5c5;
+
+  --bg-body: #242424;
+  --bg-surface: #1a1a1a;
+  --bg-card: #1e1e1e;
+
+  --bg-themeSwitch-slider: radial-gradient(
+    circle at 20px 25px,
+    rgb(2, 7, 10),
+    rgb(2, 7, 10)
+  );
+  --bg-sun-moon-toggle: radial-gradient(
+    circle at 10px,
+    #e4dbac 0%,
+    #aca682 60%,
+    #000514 100%
+  );
+
+  --text-primary: rgba(255, 255, 255, 0.9);
+  --text-secondary: rgba(255, 255, 255, 0.7);
+
+  --border-color: #333;
+
+  --shadow-border: inset 0 0 0 1px #383838;
+
+  --shadow-1: 8px 0px 13px 2px hsla(0, 0%, 100%, 0.247);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.25);
+  --shadow-header-scrolled: -4px -4px 12px hsla(0, 0%, 100%, 0.05),
+    4px 4px 12px black;
+  --shadow-header-scrolled: -4px -4px 12px cornsilk;
+  --shadow-skills__item-hover: -4px 4px 7px 0px rgb(193, 225, 255);
+} */
+
+/* Неиспользуемые переменные: --color-primary, --color-primary-hover, --color-warning, --color-warning-hover, --color-theme-1, --bg-surface, --bg-card, --bg-header-toggle-theme, --accent-color, --border-color, --shadow-border, --shadow-md, --shadow-lg, --space-xs, --space-sm, --space-md, --container-padding, --marginBottom20. */

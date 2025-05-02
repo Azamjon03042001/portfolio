@@ -1,0 +1,58 @@
+.hero__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__body {
+  margin-right: max(40px, 10%);
+  width: 100%;
+  font-size: clamp(32px, calc(32.3px + 1.03vw), 48px);
+}
+
+.highlightText {
+  display: block;
+  line-height: 1.2;
+  background-image: linear-gradient(
+    to right,
+    rgb(24, 86, 167),
+    rgb(77, 184, 35)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.about__description {
+  line-height: 1.2;
+}
+
+.hero__scene {
+  height: 400px;
+  width: 400px;
+}
+
+.hero__scene img {
+  border-radius: var(--border-radius-img);
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .hero__body {
+    flex: 0 0 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__inner {
+    flex-direction: column;
+  }
+
+  .hero__body {
+    margin-right: auto;
+  }
+
+  .hero__scene {
+    height: 300px;
+    width: 300px;
+  }
+}

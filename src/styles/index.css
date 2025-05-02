@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--headerHeight);
+}
+
+body {
+  padding-top: var(--headerHeight);
+}
+
+:root {
+  font-family: var(--font-main);
+  font-weight: var(--base-font-weight);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+  min-width: var(--siteMinWidth);
+  transition: var(--transition-all-3s-ease-in-out);
+}
+
+#root {
+  min-height: 100vh;
+}
